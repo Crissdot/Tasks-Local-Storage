@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks Local Storage</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js"></script>
+</head>
+<body>
+    <div class="box">
+        <label>Add new task</label>
+        <textarea id="textTask"></textarea>
+        <button class="btn--success" onclick="taskManager.add()">SAVE</button>
+    </div>
+
+    <div id="tasks"></div>
+</body>
+<script>
+    const divTasks = document.getElementById('tasks');
+    const textTask = document.getElementById('textTask');
+
+    let taskManager = new TaskManager(divTasks, textTask);
+</script>
+</html>
